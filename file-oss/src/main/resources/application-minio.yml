@@ -1,0 +1,4 @@
+oss:
+  endpoint: http://minio.yonghui.cn
+  access-key: yonghui
+  secret-key: yonghui

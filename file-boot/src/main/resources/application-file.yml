@@ -1,0 +1,12 @@
+server:
+  port: 443
+  ssl:
+    key-store: classpath:www.mymeizi.xyz.pfx
+    key-store-password: f7513407n99dyxa
+    keyStoreType: PKCS12
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 1000000000
+      max-request-size: 1000000000

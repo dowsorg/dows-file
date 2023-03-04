@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.dows.file.mapper.FileCatalogMapper">
+
+    <resultMap type="org.dows.file.entity.FileCatalog" id="FileCatalogMap">
+        <result property="id" column="ID" jdbcType="INTEGER"/>
+        <result property="pid" column="PID" jdbcType="INTEGER"/>
+        <result property="catalogNo" column="CATALOG_NO" jdbcType="VARCHAR"/>
+        <result property="catalogName" column="CATALOG_NAME" jdbcType="VARCHAR"/>
+        <result property="catelogCode" column="CATELOG_CODE" jdbcType="VARCHAR"/>
+        <result property="catelogSize" column="CATELOG_SIZE" jdbcType="INTEGER"/>
+        <result property="localPath" column="LOCAL_PATH" jdbcType="VARCHAR"/>
+        <result property="fileTyp" column="FILE_TYP" jdbcType="VARCHAR"/>
+        <result property="fileCount" column="FILE_COUNT" jdbcType="INTEGER"/>
+        <result property="accountNo" column="ACCOUNT_NO" jdbcType="VARCHAR"/>
+        <result property="appId" column="APP_ID" jdbcType="VARCHAR"/>
+        <result property="tentantNo" column="TENTANT_NO" jdbcType="VARCHAR"/>
+        <result property="creator" column="CREATOR" jdbcType="VARCHAR"/>
+        <result property="deleted" column="DELETED" jdbcType="BOOLEAN"/>
+        <result property="dt" column="DT" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+</mapper>

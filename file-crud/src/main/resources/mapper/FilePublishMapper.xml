@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.dows.file.mapper.FilePublishMapper">
+
+    <resultMap type="org.dows.file.entity.FilePublish" id="FilePublishMap">
+        <result property="id" column="ID" jdbcType="INTEGER"/>
+        <result property="catalogNo" column="CATALOG_NO" jdbcType="VARCHAR"/>
+        <result property="publishNo" column="PUBLISH_NO" jdbcType="VARCHAR"/>
+        <result property="accountNo" column="ACCOUNT_NO" jdbcType="VARCHAR"/>
+        <result property="md5" column="MD5" jdbcType="VARCHAR"/>
+        <result property="fileName" column="FILE_NAME" jdbcType="VARCHAR"/>
+        <result property="fileTyp" column="FILE_TYP" jdbcType="VARCHAR"/>
+        <result property="fileRatio" column="FILE_RATIO" jdbcType="INTEGER"/>
+        <result property="encoding" column="ENCODING" jdbcType="VARCHAR"/>
+        <result property="bytes" column="BYTES" jdbcType="INTEGER"/>
+        <result property="url" column="URL" jdbcType="VARCHAR"/>
+        <result property="suffix" column="SUFFIX" jdbcType="VARCHAR"/>
+        <result property="deviceId" column="DEVICE_ID" jdbcType="VARCHAR"/>
+        <result property="osTyp" column="OS_TYP" jdbcType="INTEGER"/>
+        <result property="status" column="STATUS" jdbcType="INTEGER"/>
+        <result property="deleted" column="DELETED" jdbcType="BOOLEAN"/>
+        <result property="dt" column="DT" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+</mapper>

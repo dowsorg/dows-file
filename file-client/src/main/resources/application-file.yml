@@ -1,0 +1,100 @@
+cop:
+  file:
+    # 文件编码设置
+    coder:
+      host: https://itservice-test.avt.sitgw.yonghui.cn/videos/
+    # 文件上传设置
+    uploader:
+      adapter: impl.org.dows.file.client.HttpClientFileAccessImpl
+      # 地址
+      host: http://localhost:5678
+      callback: http://localhost:1234/callback
+      endpoint:
+        # 分块上传
+        up-chuck: /upload/chunk
+        # 普通上传
+        up-normal: /upload
+        # 分块下载
+        down-chuck: /download/chunk
+        # 普通下载
+        down-normal: /download
+    # 文件存储设置
+    storer:
+      #文件存放位置
+      root-path:
+    # 授权key
+    auth:
+      secret-id: 111
+      secret-key: 333
+
+
+
+
+
+
+
+
+
+
+
+
+    adapter: impl.org.dows.file.client.HttpClientFileAccessImpl
+    # 地址
+    host: http://localhost:5678
+    #上传文件端点
+    endpoint:
+      # 分块上传
+      up-chuck: /upload/chunk
+      # 普通上传
+      up-normal: /upload
+      # 分块下载
+      down-chuck: /download/chunk
+      # 普通下载
+      down-normal: /download
+    #文件存放位置
+    store-path:
+
+    #公共池
+    pool:
+      socketTimeout: 180000 # 上传视频文件等待3分钟返回
+      #连接池的最大连接数，0代表不限；如果取0，需要考虑连接泄露导致系统崩溃的后果
+      maxTotalConnect: 1000
+      #每个路由的最大连接数,如果只调用一个地址,可以将其设置为最大连接数
+      maxConnectPerRoute: 200
+      # 指客户端和服务器建立连接的超时时间,ms , 最大约21秒,因为内部tcp在进行三次握手建立连接时,默认tcp超时时间是20秒
+      connectTimeout: 3000
+      # 指客户端从服务器读取数据包的间隔超时时间,不是总读取时间,也就是socket timeout,ms
+      readTimeout: 5000
+      # 从连接池获取连接的timeout,不宜过大,ms
+      connectionRequestTimout: 200
+      # 重试次数
+      retryTimes: 3
+      charset: UTF-8
+      # 长连接保持时间 单位s,不宜过长
+      keepAliveTime: 10
+      # 针对不同的网址,长连接保持的存活时间,单位s,如果是频繁而持续的请求,可以设置小一点,不建议设置过大,避免大量无用连接占用内存资源
+      keepAliveTargetHost:
+        www.baidu.com: 5
+    # 隔离池，针对不同的业务
+    isolate-pools:
+      # 分片上传连接池
+      sliceUploadPool:
+        socketTimeout: 180000 # 上传视频文件等待3分钟返回
+        #连接池的最大连接数，0代表不限；如果取0，需要考虑连接泄露导致系统崩溃的后果
+        maxTotalConnect: 1000
+        #每个路由的最大连接数,如果只调用一个地址,可以将其设置为最大连接数
+        maxConnectPerRoute: 200
+        # 指客户端和服务器建立连接的超时时间,ms , 最大约21秒,因为内部tcp在进行三次握手建立连接时,默认tcp超时时间是20秒
+        connectTimeout: 3000
+        # 指客户端从服务器读取数据包的间隔超时时间,不是总读取时间,也就是socket timeout,ms
+        readTimeout: 5000
+        # 从连接池获取连接的timeout,不宜过大,ms
+        connectionRequestTimout: 200
+        # 重试次数
+        retryTimes: 3
+        charset: UTF-8
+        # 长连接保持时间 单位s,不宜过长
+        keepAliveTime: 10
+        # 针对不同的网址,长连接保持的存活时间,单位s,如果是频繁而持续的请求,可以设置小一点,不建议设置过大,避免大量无用连接占用内存资源
+        keepAliveTargetHost:
+          www.baidu.com: 5

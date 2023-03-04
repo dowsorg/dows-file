@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <simplefs>
+        <filetype name="表格" value="A" path="d:/excel" prefix="yyyyMMdd"/>
+        <filetype name="文档" value="B" path="d:/word" prefix="yyyyMMdd"/>
+        <filetype name="幻灯片" value="C" path="d:/ppt" prefix="yyyyMM"/>
+        <filetype name="其他文件类型" value="D" path="d:/other" prefix="yyyyMM"/>
+    </simplefs>
+</configuration>

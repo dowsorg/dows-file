@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.dows.framework</groupId>
+        <artifactId>dows-frameworks</artifactId>
+        <version>20220701-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>framework-file</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>file-api</module>
+        <module>file-client</module>
+        <module>file-boot</module>
+        <module>file-crud</module>
+        <module>file-rest</module>
+        <module>file-biz</module>
+        <module>file-pojo</module>
+        <module>file-sdk</module>
+        <module>file-oss</module>
+        <module>file-rpc</module>
+    </modules>
+
+
+</project>
